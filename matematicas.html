@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematicas</title>
+</head>
+<body>
+    <script>
+        class Matematica {
+            static mayor(num1, num2) {
+                if (num1 > num2)
+                    return num1;
+                else
+                    return num2;
+            }
+
+            static menor(num1, num2) {
+                if (num1 < num2)
+                    return num1;
+                else
+                    return num2;
+            }
+
+            static aleatorio(inicio, fin) {
+                return Math.trunc((Math.random() * (fin + 1 - inicio)) + inicio);
+            }
+        }
+
+        let a1 = Matematica.aleatorio(1, 100);
+        let a2 = Matematica.aleatorio(1, 100);
+        document.write(`El mayor entre ${a1} y ${a2} es ${Matematica.mayor(a1,a2)} <br>`);
+        document.write(`El menor entre ${a1} y ${a2} es ${Matematica.menor(a1,a2)}`);
+    </script>
+</body>
+</html>

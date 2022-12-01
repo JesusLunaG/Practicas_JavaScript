@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia 16</title>
+  </head>
+
+  <body>
+    <script>
+      function Cliente(nombre, saldo) {
+        this.nombre = nombre;
+        this.saldo = saldo;
+        this.depositar = depositar;
+        this.extraer = extraer;
+      }
+
+      function depositar(dinero) {
+        this.saldo = this.saldo + dinero;
+      }
+
+      function extraer(dinero) {
+        this.saldo = this.saldo - dinero;
+      }
+
+      let customerOne;
+        customerOne = new Cliente('Baruck', 100);
+        document.write('Nombre del cliente:' + customerOne.nombre  );
+        document.write('<br>');
+        document.write('Saldo actual:' + customerOne.saldo  );
+        document.write('<br>');
+        customerOne.depositar(2000);
+        document.write('Saldo luego de depositar 2000 ---->' + customerOne.saldo );
+        document.write('<br>');
+        customerOne.extraer(500);
+        document.write('Saldo luego de extraer 500 ---->' + customerOne.saldo  );
+        document.write('<br>');
+
+    </script>
+  </body>
+</html>

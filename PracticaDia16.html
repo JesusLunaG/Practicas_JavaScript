@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dia 16</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+    <script>
+        
+        function NumeroQuiniela(nombre) {
+            this.nombre = nombre;
+            this.cargarNumero = function() {
+                this.numero = parseInt(prompt("Escoge un numero " + this.nombre ));
+            }
+            this.victoria = function(num) {
+                return this.numero==num;
+
+            }
+        }
+
+       
+        function Bolillero() {
+            this.numero = -1;
+            this.sortear = function() {
+                this.numero = parseInt(Math.random() * 10) + 1;
+            }
+        }
+     
+        let numeroquinielaUno;
+        numeroquinielaUno = new NumeroQuiniela("Angel");
+        numeroquinielaUno.cargarNumero();
+        let numeroquinielaDos;
+        numeroquinielaDos = new NumeroQuiniela("Baruck");
+        numeroquinielaDos.cargarNumero();
+        let bolillero;
+        bolillero = new Bolillero();
+        bolillero.sortear();
+        document.write('Numero sorteado:' + bolillero.numero + '<br>');
+        document.write(numeroquinielaUno.nombre + ' eligió ' + numeroquinielaUno.numero );
+        document.write('<br>')
+        document.write(numeroquinielaDos.nombre + ' eligió ' + numeroquinielaDos.numero );
+        document.write('<br>')
+        if (numeroquinielaUno.victoria(bolillero.numero)) {
+            document.write(numeroquinielaUno.nombre + ' ganó <br>');
+        }
+        if (numeroquinielaDos.victoria(bolillero.numero)) {
+            document.write(numeroquinielaDos.nombre + ' ganó <br>');
+        }
+    </script>
+
+</body>
+
+</html>
