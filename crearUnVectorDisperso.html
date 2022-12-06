@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear in vector disperso</title>
+</head>
+<body>
+    <script>
+        let ficha = [];
+        let num1 = 0;
+        do {
+            let premio = parseInt(Math.random() * 1000);
+            ficha[premio] = 1000 * (num1 + 1);
+            num1++;
+        } while (num1 != 11);
+        for (let i = 0; i < ficha.length; i++) {
+            if (ficha[i] != undefined) {
+                document.write('Ficha ' + i + ' tiene un premio de ' + ficha[i] + '<br>');
+            }
+        }
+    </script>
+</body>
+</html>
