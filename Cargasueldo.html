@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carga de sueldos por teclado</title>
+  </head>
+  <body>
+    <script>
+        let ingreso;
+        let sueldos = [];
+      do {
+        ingreso = prompt("Ingrese el sueldo :", "");
+        ingreso = parseInt(ingreso);
+        if (ingreso != 0) {
+          sueldos.push(ingreso);
+        }
+      } while (ingreso != 0);
+      var suma = 0;
+      for (var i = 0; i < sueldos.length; i++) {
+        suma = suma + sueldos[i];
+      }
+      document.write("El total en sueldos ingresado es:" + suma);
+    </script>
+  </body>
+</html>
